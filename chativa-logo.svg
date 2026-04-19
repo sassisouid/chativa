@@ -1,0 +1,39 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background with premium rounded corners -->
+  <rect width="512" height="512" rx="114" fill="#020617"/> 
+  
+  <defs>
+    <!-- Multi-stop Gold Gradient for 3D effect -->
+    <linearGradient id="gold_grad" x1="0" y1="0" x2="512" y2="512" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FDE68A"/>
+      <stop offset="20%" stop-color="#F59E0B"/>
+      <stop offset="50%" stop-color="#D97706"/>
+      <stop offset="80%" stop-color="#B45309"/>
+      <stop offset="100%" stop-color="#78350F"/>
+    </linearGradient>
+    
+    <!-- Subtle Inner Shadow for Depth -->
+    <filter id="depth" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="4" dy="4" result="offsetblur"/>
+      <feFlood flood-color="#000" flood-opacity="0.5"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- External "C" Arch -->
+  <path d="M370 170C343.5 138.5 302 120 256 120C180.888 120 120 180.888 120 256C120 331.112 180.888 392 256 392C302 392 343.5 373.5 370 342" stroke="url(#gold_grad)" stroke-width="32" stroke-linecap="round" filter="url(#depth)"/>
+  
+  <!-- Internal Chat Bubble (The 'P' shape) -->
+  <path d="M220 220H320V320H256L220 356V220Z" fill="url(#gold_grad)" filter="url(#depth)"/>
+  
+  <!-- Neural Link Detail (Small Glowing Dot) -->
+  <circle cx="256" cy="256" r="12" fill="#FFFFFF" fill-opacity="0.8">
+    <animate attributeName="r" values="8;14;8" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="fill-opacity" values="0.4;0.9;0.4" dur="2s" repeatCount="indefinite" />
+  </circle>
+</svg>
