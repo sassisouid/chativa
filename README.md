@@ -1,8 +1,10 @@
-# 💬 Chativa: Self-Hosted Chat & E2EE Encrypted Messaging for SMEs
+# Chativa: Self-Hosted Chat & E2EE Encrypted Messaging for SMEs
 ![License](https://img.shields.io/badge/License-Lifetime-blue.svg) ![Security](https://img.shields.io/badge/Security-E2EE-success.svg) ![Deployment](https://img.shields.io/badge/Deployment-On--Premise-orange)
 
 **Chativa** is a high-performance, self-hosted messaging suite designed to eliminate third-party dependencies and secure internal team workflows over local or remote infrastructures. Built specifically for **SMEs** who refuse to compromise on data privacy.
-
+<p align="center">
+  <img src="https://raw.githubusercontent.com/sassisouid/chativa/main/assets/chativa-logo.png" alt="Chativa Logo" width="200" />
+</p>
 ### ⚡ Technical Capabilities
 - **Zero-Knowledge Encryption**: Built-in E2EE ensures your payloads are unreadable in transit.
 - **True Air-Gapped Environments**: Deploy on bare-metal or local subnets. Fully functional without an active internet connection.
