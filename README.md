@@ -17,8 +17,7 @@
 ---
 **Get Started:**
 
-[Explore the Community Engine (Free Edition)](https://github.com/sassisouid/chativa)
-[Deploy the Ultimate Node (Pro Lifetime License) ➔](https://sassisouid.gumroad.com) *(Update this link with your specific Gumroad product URL)*
+[Explore the Community Engine (Free Edition)](https://github.com/sassisouid/chativa/releases)
 
 # Deployment Guide: Chativa Architecture & Installation
 
