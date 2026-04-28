@@ -34,9 +34,7 @@ Most team messaging tools — Slack, Teams, Discord — store your conversations
 
 <div align="center">
 
-[![Chativa Demo](https://raw.githubusercontent.com/sassisouid/chativa/main/assets/chativa-logo.png)](https://raw.githubusercontent.com/sassisouid/chativa/main/assets/chativa-demo.mp4)
-
-▶️ **[Watch the demo video](https://raw.githubusercontent.com/sassisouid/chativa/main/assets/chativa-demo.mp4)**
+https://github.com/user-attachments/assets/3b0b6fe6-46ba-42ba-bb2f-f87df701b967
 
 </div>
 
