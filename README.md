@@ -1,94 +1,184 @@
-# Chativa: Self-Hosted Chat & E2EE Encrypted Messaging for SMEs
-![License](https://img.shields.io/badge/License-Lifetime-blue.svg) ![Security](https://img.shields.io/badge/Security-E2EE-success.svg) ![Deployment](https://img.shields.io/badge/Deployment-On--Premise-orange)
+<div align="center">
 
-**Chativa** is a high-performance, self-hosted messaging suite designed to eliminate third-party dependencies and secure internal team workflows over local or remote infrastructures. Built specifically for **SMEs** who refuse to compromise on data privacy.
-<p align="center">
-  <img src="https://raw.githubusercontent.com/sassisouid/chativa/main/assets/chativa-logo.png" alt="Chativa Logo" width="200" />
-</p>
+<img src="client/uploads/chativa-logo.svg" alt="Chativa Logo" width="120" />
 
-# Technical Capabilities
+# Chativa
 
-- **Zero-Knowledge Encryption**: Built-in E2EE ensures your payloads are unreadable in transit.
-- **True Air-Gapped Environments**: Deploy on bare-metal or local subnets. Fully functional without an active internet connection.
-- **Uncapped Scalability**: Host an unlimited numbers of agents and clients without per-seat licensing.
-- **Native A/V Broadcasting**: Handles P2P WebRTC audio/video connections and encrypted binary storage out of the box.
-- **AI-Ready Nodes**: Inject your own conversational agents (e.g., Gemini) directly into the neural routing system.
+### Self-Hosted, End-to-End Encrypted Team Messaging — with AI
 
----
-**Get Started:**
+**The privacy-first alternative to Slack and Microsoft Teams.**  
+Your messages. Your server. Your rules.
 
-[Explore the Community Engine (Free Edition)](https://github.com/sassisouid/chativa/releases)
+[![Version](https://img.shields.io/badge/version-1.0.0-gold?style=flat-square)](https://github.com/sassisouid/chativa/releases/tag/v1.0.0)
+[![License](https://img.shields.io/badge/license-Commercial-blue?style=flat-square)](LICENSE.txt)
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%2F11-lightgrey?style=flat-square)](https://github.com/sassisouid/chativa/releases)
+[![Download](https://img.shields.io/badge/download-Gumroad-orange?style=flat-square)](https://neuralsales.gumroad.com/l/chativa)
 
-# Deployment Guide: Chativa Architecture & Installation
+[⬇️ Download v1.0.0](https://github.com/sassisouid/chativa/releases/tag/v1.0.0) · [📖 Documentation](#installation) · [💬 Support](mailto:support@chativa.pro) · [🛒 Get Pro](https://neuralsales.gumroad.com/l/chativa)
 
-### Introduction to the Infrastructure
-The deployment of **Chativa** has been engineered to be as seamless as the interface itself. Whether you choose a local installation for absolute "offline" privacy or a cloud hosting setup for global collaboration, our **Neural Core** engine adapts to your needs.
+</div>
 
 ---
 
-## I. System Prerequisites (Neural Prerequisites)
+## Why Chativa?
 
-Before initiating the uplink, ensure your environment meets the following specifications:
+Most team messaging tools — Slack, Teams, Discord — store your conversations on **their** servers. You have no control over who reads your data, how long it's kept, or what happens if they get breached.
 
-#### 1. Local Deployment (PC / Windows)
-*   **Operating System**: Windows 10 or 11 (64-bit Architecture).
-*   **Database Engine**: An active **MongoDB** instance (Local installation or MongoDB Atlas cluster).
-*   **Network Environment**: Port **5000** must be available to allow the Node.js server to communicate with the interface.
-*   **Connectivity**: Internet access required only for the initial license synchronization.
+**Chativa is different.** It runs entirely on your own infrastructure. Every message is end-to-end encrypted before it leaves the sender's device. No third party can read your conversations — not even us.
 
-#### 2. Remote Deployment (VPS / Node.js Cloud Hosting)
-To ensure 24/7 global accessibility, Chativa must be deployed on a robust server infrastructure.
-*   **Runtime Environment**: **Node.js v16** or newer.
-*   **Transfer & Storage**: **FTP/SFTP** access for deploying the source files.
-*   **Database**: MongoDB (Recommended: Atlas for high availability).
-*   **Security (MANDATORY)**: A valid **SSL (HTTPS)** certificate.
-    > [!IMPORTANT]
-    > Audio/Video calls and camera/mic access are blocked by browsers on unsecured connections (HTTP). Switching to HTTPS is a required step to activate the WebRTC link.
-*   **Network Protocols**: **WebSockets** authorization and Port **5000** opening.
+> 💡 **Perfect for:** SMEs, legal firms, healthcare teams, agencies, and any business that handles sensitive information.
 
 ---
 
-## II. Installation Steps (Neural Ignition Sequence)
+## Features
 
-Follow this step-by-step protocol to activate your communication hub.
+### 🔐 Privacy & Security
+- **End-to-End Encryption (E2EE)** — RSA-2048 + AES-256-GCM on every message and file
+- **Self-hosted** — Deploy on your own Windows machine or VPS. Zero data leaves your infrastructure
+- **JWT Authentication** — 7-day tokens with server-side invalidation on logout
+- **Rate limiting** — Built-in brute-force protection on all API endpoints
 
-### A. Local Deployment (Quick Start)
-1.  **Extraction**: Unzip the Chativa archive onto your local drive.
-2.  **Ignition**: Run the `Chativa.exe` file (or the startup script).
-3.  **Assistant**: Follow the Smart Assistant instructions to link your local MongoDB.
+### 💬 Real-Time Messaging
+- **1:1 and group chat** — Unlimited conversations with read receipts (✓ sent, ✓✓ read)
+- **Voice messages** — Record and send audio clips up to 60 seconds
+- **File sharing** — Send images, documents, audio, and video (up to 100 MB)
+- **Message deletion** — Remove messages from both sides
+- **@mentions** — Notify specific team members in group rooms
 
-### B. Remote Hosting Deployment (Detailed)
-Server-side deployment requires precision to guarantee a stable connection.
+### 📞 Audio & Video Calls
+- **WebRTC-powered** — Peer-to-peer calls with no relay server required
+- **1:1 and group calls** — Up to 6 participants per call
+- **Screen sharing** — Share your screen during any call
+- **Full call controls** — Mute, camera toggle, hang up
 
-#### 1. Transferring Media via FTP/SFTP
-Use a client like **FileZilla** or **WinSCP** to transfer the entire Chativa package to your server directory (usually `/var/www/` or your Node.js hosting root). 
-*   *Tip: Transfer the compressed archive (.zip) to save time and preserve file integrity.*
+### 🤖 AI-Powered Features (Gemini)
+- **Conversation summaries** — Get a 3-point summary of any conversation instantly
+- **Reply suggestions** — AI-generated response options based on context
+- **AI chat widget** — Auto-reply to website visitors, escalate to human agents when needed
+- **Per-project AI config** — Custom system prompts and personalities per widget
 
-#### 2. Extraction & Permissions
-Once the transfer is complete:
-- **Extraction**: Use your hosting panel's file manager or the `unzip` command via SSH to extract the files.
-- **Access Rights**: Ensure the server has write permissions for the `uploads/` and `client/config/` folders.
+### 🧩 Embeddable Chat Widget
+- **One-line integration** — Add live chat to any website with a single `<script>` tag
+- **Lead capture** — Collect visitor name and email before starting a chat
+- **Custom branding** — Match your brand colors and welcome message
+- **AI auto-reply** — Handle visitor questions 24/7 without an agent
 
-#### 3. Linking the Access Point (URL)
-Point your domain name to your server's IP address. Then, access the following URL to launch the Configuration Assistant:
-`https://your-domain.com/installer`
-
-#### 4. Service Initialization (Persistence)
-To ensure Chativa stays operational after your console session is closed, it is recommended to use a process manager like **PM2**:
-`pm2 start server.js --name "chativa-core"`
+### ⚙️ Administration
+- **Multi-language** — English, Français, Español
+- **Role-based access** — Admin and Agent roles with granular permissions
+- **System settings** — File limits, call quotas, AI configuration — all from the dashboard
+- **Automatic updates** — One-click update notifications built in
 
 ---
 
-## III. Database Link Configuration (Logic)
-During the configuration step in the assistant:
-1.  Enter your **MongoDB URI**.
-2.  Create your **Core Administrator** profile (Name, Email, Passcode).
-3.  **Activate Protocol**: The system will proceed with final synchronization and redirect you to the **Neural Dashboard**.
+## Free vs Pro
+
+| Feature | Free | Pro |
+|---------|:----:|:---:|
+| Agents | Up to 3 | ✅ Unlimited |
+| Projects / Widgets | 1 | ✅ Unlimited |
+| Audio/Video Calls | 10 / month | ✅ Unlimited |
+| AI Requests | 20 / day | ✅ 1,000 / day |
+| Message History | 30 days | ✅ Unlimited |
+| 1:1 & Group Chat | ✅ | ✅ |
+| File Sharing | ✅ 10 MB | ✅ Configurable |
+| E2EE Encryption | ✅ | ✅ |
+| Widget Integration | ✅ | ✅ |
+| AI Widget (Auto-reply) | ✅ | ✅ |
+| Automatic Updates | ✅ | ✅ |
+| Priority Support | ❌ | ✅ |
+| Advanced Analytics | ❌ | ✅ |
+
+👉 **[Get Pro on Gumroad](https://neuralsales.gumroad.com/l/chativa)**
 
 ---
 
-## IV. Maintenance Recommendations
-*   **Identity Backup**: Upon your first login, export your **Private Neural Key** from the profile settings. This is the only way to restore access to your encrypted files (E2EE) if you change machines.
-*   **Updates**: The Chativa system periodically checks for component integrity. Ensure you keep your instance updated for the latest security patches.
+## Installation
 
-**Congratulations. Your Chativa infrastructure is now active and secure.**
+### Requirements
+
+| Component | Minimum |
+|-----------|---------|
+| OS | Windows 10 / 11 (x64) |
+| RAM | 4 GB |
+| Disk | 500 MB free |
+| Database | MongoDB 4.4+ (Atlas or self-hosted) |
+
+### Quick Start (3 steps)
+
+**1. Download and extract**
+```
+Chativa-E2EE-x64-v1.0.0.zip → Extract → Chativa.exe
+```
+
+**2. Run the setup wizard**
+
+Double-click `Chativa.exe`. The 5-step wizard will guide you through:
+- MongoDB connection (paste your Atlas URI or local connection string)
+- Admin account creation
+- First project setup
+- (Optional) Pro license activation
+
+**3. Open the dashboard**
+
+The app opens automatically at `http://localhost:5000`. Invite your team via **Users → Add User**.
+
+> 📖 For detailed instructions, see the [User Guide](https://github.com/sassisouid/chativa/releases/download/v1.0.0/Chativa-E2EE-x64-v1.0.0.zip) included in the release ZIP.
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|-------|-----------|
+| Desktop shell | Electron 31 |
+| Backend | Node.js + Express |
+| Real-time | Socket.io |
+| Database | MongoDB + Mongoose |
+| Calls | WebRTC (peer-to-peer) |
+| Encryption | RSA-2048 + AES-256-GCM |
+| AI | Google Gemini API |
+| Auth | JWT (jsonwebtoken) |
+
+---
+
+## Roadmap
+
+- [x] v1.0.0 — Production stable release
+- [ ] v1.1.0 — Admin UI for Cloudinary & Stripe configuration
+- [ ] v1.1.0 — Advanced analytics dashboard
+- [ ] v1.2.0 — macOS & Linux support
+- [ ] v1.2.0 — Mobile companion app (iOS / Android)
+- [ ] v2.0.0 — Multi-tenant SaaS mode
+
+---
+
+## Support
+
+| Channel | Details |
+|---------|---------|
+| 📧 Email | [support@chativa.pro](mailto:support@chativa.pro) |
+| 🐛 Bug Reports | [Issues](https://github.com/sassisouid/chativa/issues) |
+| 💡 Feature Requests | [Discussions](https://github.com/sassisouid/chativa/discussions) |
+| 📖 In-app Help | **Help → Documentation** inside the app |
+
+When reporting a bug, please include your Windows version and the contents of `%APPDATA%\Chativa\chativa-debug.log`.
+
+---
+
+## License
+
+Chativa is distributed under a **Commercial License**.  
+Free Edition available with usage limits. Pro Edition requires a license purchased on [Gumroad](https://neuralsales.gumroad.com/l/chativa).
+
+See [LICENSE.txt](LICENSE.txt) for full terms.
+
+---
+
+<div align="center">
+
+**[⬇️ Download Free](https://github.com/sassisouid/chativa/releases/tag/v1.0.0)** · **[🛒 Upgrade to Pro](https://neuralsales.gumroad.com/l/chativa)** · **[📧 Contact](mailto:support@chativa.pro)**
+
+*Built for teams that take privacy seriously.*
+
+</div>
