@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="client/uploads/chativa-logo.svg" alt="Chativa Logo" width="120" />
+<img src="https://raw.githubusercontent.com/sassisouid/chativa/main/assets/chativa-logo.png" alt="Chativa Logo" width="120" />
 
 # Chativa
 
