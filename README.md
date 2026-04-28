@@ -30,6 +30,16 @@ Most team messaging tools — Slack, Teams, Discord — store your conversations
 
 ---
 
+## See It in Action
+
+<div align="center">
+
+https://github.com/sassisouid/chativa/assets/chativa-demo.mp4
+
+</div>
+
+---
+
 ## Features
 
 ### 🔐 Privacy & Security
